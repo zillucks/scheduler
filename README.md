@@ -4,7 +4,7 @@
 ---
 ## Specification
 ---
-1.  [Laravel 5.7]((https://laravel.com/docs/5.7/installation))
+1.  [Laravel 5.7](https://laravel.com/docs/5.7/installation)
 2.  [Composer](https://getcomposer.org/download/)
 3.  Web Server (Apache/Nginx)
 3.  PHP >= 7.1.3
