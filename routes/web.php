@@ -58,6 +58,7 @@ Route::get('logout', function () {
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['role:admin, manager, helpdesk, user']], function () {
 
