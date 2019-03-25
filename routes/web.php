@@ -31,7 +31,7 @@ Route::get('generate-adminuser', function (\Illuminate\Http\Request $request, \A
 
             $user->identity()->save($identity);
 
-            $user->roles()->sync($role->id);
+            $user->roles()->sync($role_id);
 
             DB::commit();
 
