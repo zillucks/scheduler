@@ -55,6 +55,13 @@ Route::get('logout', function () {
     return redirect('');
 })->name('logout');
 
+/**
+ * for test only
+ */
+Route::get('test', function () {
+    return 'Test Success';
+});
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
