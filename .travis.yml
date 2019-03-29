@@ -1,9 +1,11 @@
 language: php
 php:
-  - 7.1.3
+  - 7.1.0
+  - 7.2.0
+  - 7.3.0
 before_script:
   - travis_retry composer self-update
-  - travis retry composer install --prefer-source --no-interaction --dev
+  - travis_retry composer install --prefer-source --no-interaction --dev
   - cp .env.example .env
   - php artisan key:generate
 script:
