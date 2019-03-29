@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Adldap\Laravel\Facades\Adldap;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Auth;
+use Illuminate\Database\QueryException;
 
 class LoginController extends Controller
 {
@@ -41,5 +45,29 @@ class LoginController extends Controller
     {
         return 'username';
     }
+
+    // public function login(Request $request)
+    // {
+    //     $this->validateLogin($request);
+
+    //     if ($this->hasTooManyLoginAttempts($request)) {
+    //         $this->fireLockoutEvent($request);
+
+    //         return $this->sendLockoutResponse($request);
+    //     }
+
+    //     $credentials = $request->only('username', 'password');
+
+    //     if (Auth::guard('ldap')->attempt($credentials)) {
+    //         return $this->sendLoginResponse($request);
+    //     }
+    //     else {
+    //         return $this->sendFailedLoginResponse($request);
+    //     }
+
+    //     $this->incrementLoginAttempts($request);
+
+    //     return $this->sendFailedLoginResponse($request);
+    // }
     
 }

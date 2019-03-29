@@ -45,6 +45,11 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+
+        'ldap' => [
+            'driver' => 'session',
+            'provider' => 'ldap_users',
+        ]
     ],
 
     /*
@@ -66,9 +71,13 @@ return [
 
     'providers' => [
         'users' => [
-            'driver' => 'eloquent',
+            'driver' => 'ldap', //eloqueunt
             'model' => App\Models\User::class,
         ],
+        'ldap_users' => [
+            'driver' => 'ldap',
+            'model' => App\Models\User::class,
+        ]
 
         // 'users' => [
         //     'driver' => 'database',

@@ -7,10 +7,11 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Adldap\Laravel\Traits\HasLdapUser;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, HasLdapUser;
 
     protected $table = 'users';
     public $incrementing = false;
