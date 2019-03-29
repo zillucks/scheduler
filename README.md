@@ -1,5 +1,5 @@
 # Scheduler
-
+[![Build Status](https://travis-ci.com/zillucks/scheduler.svg?branch=master)](https://travis-ci.com/zillucks/scheduler)
 ### Scheduler App made with Laravel 5.7
 ---
 ## Specification
